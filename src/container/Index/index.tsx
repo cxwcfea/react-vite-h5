@@ -1,4 +1,4 @@
-import { Button } from "antd-mobile";
+import { Button } from 'antd-mobile';
 
 import s from './style.module.less';
 

@@ -4,12 +4,12 @@ import { Toast } from 'antd-mobile';
 const MODE = import.meta.env.MODE;
 
 axios.defaults.baseURL = MODE == 'development' ? '/api' : 'http://api.chennick.wang';
-axios.defaults.withCredentials = true
+axios.defaults.withCredentials = true;
 axios.defaults.headers['X-Requested-With'] = 'XMLHttpRequest';
 axios.defaults.headers['Authorization'] = `${localStorage.getItem('token') || null}`;
 axios.defaults.headers.post['Content-Type'] = 'application/json';
 
-axios.interceptors.response.use(res => {
+axios.interceptors.response.use((res) => {
   if (typeof res.data !== 'object') {
     Toast.show('服务端异常！');
     return Promise.reject(res);
