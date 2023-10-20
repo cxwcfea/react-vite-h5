@@ -1,16 +1,42 @@
-import { createBrowserRouter } from 'react-router-dom';
-import Index from '@/container/Index';
-import About from '@/container/About';
+// import { createBrowserRouter } from 'react-router-dom';
+import Detail from '@/container/Detail';
+// import About from '@/container/About';
+import Home from '@/container/Home';
+import Data from '@/container/Data';
+import User from '@/container/User';
 
-const router = createBrowserRouter([
+// const router = createBrowserRouter([
+//   {
+//     path: '/',
+//     Component: Home,
+//   },
+//   {
+//     path: '/data',
+//     Component: Data,
+//   },
+//   {
+//     path: '/user',
+//     Component: User,
+//   },
+// ]);
+
+const router = [
   {
     path: '/',
-    Component: Index,
+    component: Home,
   },
   {
-    path: '/about',
-    Component: About,
+    path: '/data',
+    component: Data,
   },
-]);
+  {
+    path: '/user',
+    component: User,
+  },
+  {
+    path: '/detail',
+    component: Detail,
+  },
+];
 
 export default router;
